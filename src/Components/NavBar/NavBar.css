@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Pattaya&display=swap');
+.navBar {
+  padding: 1.5rem 7vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.Wrapper {
+  width: 17vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: auto;
+  margin-left: 5%;
+}
+.menuItem {
+  display: none;
+  height: 30px;
+  width: 30px;
+  margin-left: 10%;
+}
+
+@media (max-width: 1200px) {
+  .Wrapper {
+    display: none;
+  }
+}
+@media (max-width: 600px) {
+  .navBar {
+    justify-content: space-between;
+  }
+  .darkThemeButton {
+    display: none !important;
+  }
+  .menuItem {
+    display: block;
+  }
+}
