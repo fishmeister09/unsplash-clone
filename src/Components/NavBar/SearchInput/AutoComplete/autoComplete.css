@@ -1,0 +1,17 @@
+.autoCompleteModal {
+  position: absolute;
+  height: 300px;
+  background-color: red;
+  z-index: 3;
+  margin-top: 2vh;
+  border-radius: 6px;
+  background-color: #fafafa;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform: translate(0, 73%);
+}
+.navBar .autoCompleteModal {
+  display: none;
+}

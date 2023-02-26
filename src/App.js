@@ -1,25 +1,41 @@
-import logo from './logo.svg';
+import { useState } from 'react';
+import '@fontsource/roboto';
+import { CssBaseline } from '@mui/material';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+import Home from './Components/Home/Home';
 import './App.css';
+// Define theme settings
+const light = {
+  palette: {
+    mode: 'light',
+  },
+  inputBorderColor: '#ECECEC',
+  inputBackColor: '#FAFAFA',
+  color: '#C4C4C4',
+};
 
-function App() {
+const dark = {
+  palette: {
+    mode: 'dark',
+  },
+  inputBorderColor: '#858484',
+  inputBackColor: '#4F4F4F',
+  color: '#8D8D8D',
+};
+
+const App = () => {
+  const [isDarkTheme, setIsDarkTheme] = useState(false);
+  const changeTheme = () => {
+    setIsDarkTheme(!isDarkTheme);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={isDarkTheme ? createTheme(dark) : createTheme(light)}>
+      <CssBaseline>
+        <Home changeTheme={changeTheme} isDarkTheme={isDarkTheme} />
+      </CssBaseline>
+    </ThemeProvider>
   );
-}
+};
 
 export default App;

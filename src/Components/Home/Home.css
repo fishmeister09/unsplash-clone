@@ -1,0 +1,7 @@
+.SearchTerm {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: max(36px, 2.1vw);
+  padding: 0 7vw;
+}

@@ -1,0 +1,21 @@
+.middleSection {
+  position: relative;
+}
+.backgroundImg {
+  height: 400px;
+  width: 100%;
+  object-fit: cover;
+  object-position: 50% 0;
+}
+.hower {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  transform: translate(0, -100%);
+}
